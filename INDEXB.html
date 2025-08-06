@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2(A)CTR NCC GITAM Recruitment 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* ========================================
+        Custom CSS for Professional Army Theme
+        ========================================
+        */
+        :root {
+            --primary-green: #4B5320; /* Army Green */
+            --secondary-green: #586028;
+            --background-white: #FFFFFF; /* White Background */
+            --off-white-text: #F5F5DC; /* Beige for text on dark bg */
+            --dark-text: #1C1C1C;
+        }
+
+        body {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--background-white);
+            color: var(--dark-text);
+            /* Subtle Camouflage Background */
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%234B5320' fill-opacity='0.05'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40z'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed; /* Parallax effect */
+        }
+
+        .army-header {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Typewriter Animation */
+        .typewriter-text {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .1em;
+            animation: typing 4s steps(30, end);
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        /* Interactive Card & Button Styles */
+        .countdown-box, .details-card {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .details-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .register-btn, .nav-btn {
+            background-color: var(--primary-green);
+            color: var(--off-white-text);
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .nav-btn {
+            background-color: var(--secondary-green);
+        }
+
+        .register-btn:hover, .nav-btn:hover {
+            background-color: var(--secondary-green);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+        }
+
+        .register-btn:active, .nav-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+        
+        .qr-code-container {
+            border: 4px solid var(--primary-green);
+            padding: 8px;
+            background: white;
+        }
+
+        /* Scroll & Page Animation */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .page {
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        /* Gallery Styles */
+        .gallery-container {
+            position: relative;
+            overflow: hidden;
+            background-color: #eee; /* Light background for images */
+        }
+        .gallery-slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .gallery-slide.active {
+            display: block;
+        }
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 0.5rem;
+            z-index: 10;
+        }
+        .gallery-nav.prev { left: 1rem; }
+        .gallery-nav.next { right: 1rem; }
+
+        /* Testimonial Styles */
+        .testimonial {
+            border-left: 4px solid var(--primary-green);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-green);
+        }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto p-4 md:p-8 text-center">
+
+        <!-- Page 1: Main Recruitment Page -->
+        <div id="page-main">
+            <!-- Header Section -->
+            <header class="mb-12">
+                <h1 class="army-header text-5xl md:text-7xl text-primary-green mb-2">2(A)CTR</h1>
+                <h2 class="text-3xl md:text-5xl text-primary-green mb-6 font-light army-header">NCC GITAM Recruitment 2025</h2>
+                <p id="typewriter" class="text-lg md:text-xl h-8"></p>
+            </header>
+
+            <!-- Countdown Timer Section -->
+            <section id="countdown-timer" class="mb-12 scroll-animate">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div class="countdown-box p-4 rounded-lg shadow-md">
+                        <div id="days" class="text-5xl font-bold text-primary-green">00</div>
+                        <div class="text-sm uppercase tracking-wider">Days</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md">
+                        <div id="hours" class="text-5xl font-bold text-primary-green">00</div>
+                        <div class="text-sm uppercase tracking-wider">Hours</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md">
+                        <div id="minutes" class="text-5xl font-bold text-primary-green">00</div>
+                        <div class="text-sm uppercase tracking-wider">Minutes</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md">
+                        <div id="seconds" class="text-5xl font-bold text-primary-green">00</div>
+                        <div class="text-sm uppercase tracking-wider">Seconds</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Event Details Section -->
+            <section id="event-details" class="mb-12 scroll-animate">
+                <div class="details-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto border-l-8 border-primary-green">
+                    <h3 class="army-header text-3xl text-primary-green mb-6">Event Dossier</h3>
+                    <div class="text-left space-y-4 text-lg">
+                        <p><strong>🗓️ Date:</strong> August 23, 2025</p>
+                        <p><strong>⏰ Time:</strong> 0700 Hours (7:00 AM Sharp)</p>
+                        <p><strong>📍 Location:</strong> Cricket Ground, GITAM University</p>
+                        <p><strong>👕 Uniform:</strong> Tracksuit with running shoes</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Eligibility Criteria Section -->
+            <section class="mb-12 max-w-2xl mx-auto scroll-animate">
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg" role="alert">
+                  <p class="font-bold">Eligibility Criteria</p>
+                  <p>Enrollment is open only to <strong>first and second-year</strong> undergraduate students of GITAM University.</p>
+                </div>
+            </section>
+            
+            <!-- Image Gallery Section -->
+            <section class="mb-12 max-w-3xl mx-auto scroll-animate">
+                <h3 class="army-header text-3xl text-primary-green mb-6">Glimpses of NCC Life</h3>
+                <div class="gallery-container rounded-lg shadow-lg">
+                    <!-- Images are now compressed for faster loading -->
+                    <div class="gallery-slide active">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/rK4DqKFP/Whats-App-Image-2025-08-06-at-20-08-39-b5b821f1.jpg&q=80" alt="Republic Day Celebration" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/yFp199Kf/Whats-App-Image-2025-08-06-at-20-41-19-86c4a43c.jpg&q=80" alt="NCC Cadets" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/5h2L5mkS/Whats-App-Image-2025-08-06-at-20-39-10-e8779013.jpg&q=80" alt="NCC Cadets in Formation" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/sdPPsj2y/Whats-App-Image-2025-08-06-at-20-36-25-713c9758.jpg&q=80" alt="NCC Officer with Cadets" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/NBW88pH/Whats-App-Image-2025-08-06-at-20-40-41-93467466.jpg&q=80" alt="NCC Group Photo" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/rKtNbm8X/Whats-App-Image-2025-08-06-at-20-42-49-1771af91.jpg&q=80" alt="NCC Cadets Marching" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/fVxsqCwk/Whats-App-Image-2025-08-06-at-20-44-49-b80496e7.jpg&q=80" alt="NCC Event" class="w-full h-auto object-cover rounded-lg">
+                    </div>
+                    <button class="gallery-nav prev">&lt;</button>
+                    <button class="gallery-nav next">&gt;</button>
+                </div>
+            </section>
+
+            <!-- Registration Section -->
+            <section id="registration" class="mb-8 scroll-animate">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4">
+                    <a href="#" id="register-link" target="_blank" class="register-btn inline-block text-2xl font-bold py-4 px-12 rounded-lg uppercase tracking-wider">
+                        Enlist Now
+                    </a>
+                    <button id="why-join-btn" class="nav-btn inline-block text-xl font-bold py-4 px-10 rounded-lg uppercase tracking-wider">
+                        Why Join NCC?
+                    </button>
+                </div>
+                <div class="mt-8 flex flex-col items-center">
+                    <p class="mb-2 text-sm uppercase">Or Scan to Register</p>
+                    <div class="qr-code-container rounded-lg shadow-md">
+                        <img id="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=YOUR_GOOGLE_FORM_LINK_HERE" alt="QR Code for Registration" class="block">
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Page 2: Why Join NCC? -->
+        <div id="page-why-join" class="hidden page">
+             <header class="mb-12">
+                <h1 class="army-header text-5xl md:text-7xl text-primary-green mb-2">Why Join NCC?</h1>
+                <h2 class="text-2xl md:text-4xl text-primary-green mb-6 font-light army-header">Shape Your Future</h2>
+            </header>
+            
+            <section class="max-w-3xl mx-auto text-left space-y-8">
+                <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Develop Core Values</h3>
+                    <p>The NCC is a premier organization that instills values of <strong>Discipline, Leadership, and Comradeship</strong>. Cadets learn to work as a team, take initiative, and develop a strong sense of national pride and selfless service (Seva Paramo Dharma).</p>
+                </div>
+                
+                 <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Unique Opportunities</h3>
+                    <p>Gain hands-on experience in adventure activities like trekking, parasailing, and rock climbing. Participate in prestigious national camps such as the Republic Day Camp (RDC) in Delhi, and even get a chance to represent India internationally through the Youth Exchange Program (YEP).</p>
+                </div>
+
+                <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Career Advantages</h3>
+                    <p>NCC 'B' & 'C' certificate holders receive bonus marks/points in various government job applications, including direct entry opportunities in the Indian Armed Forces. It's a significant stepping stone for a distinguished career.</p>
+                </div>
+                
+                <!-- Testimonials Section -->
+                <div class="details-card p-6 rounded-lg shadow-lg border-l-8 border-primary-green">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">From Our Cadets</h3>
+                    <div class="testimonial">
+                        <p class="italic">"Joining NCC was the best decision of my college life. It taught me discipline and gave me friends for a lifetime."</p>
+                        <p class="testimonial-author mt-2">-  Cadet S.Manaswin</p>
+                    </div>
+                     <div class="testimonial">
+                        <p class="italic">"The Army attachment camps were thrilling. I discovered a strength in myself I never knew I had. Jai Hind!"</p>
+                        <p class="testimonial-author mt-2">- Sergent Somisetty</p>
+                    </div>
+                </div>
+            </section>
+        
+            
+            <section class="mt-12">
+                <button id="back-to-main-btn" class="nav-btn inline-block text-xl font-bold py-4 px-10 rounded-lg uppercase tracking-wider">
+                    &larr; Back to Main
+                </button>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-primary-green text-off-white-text p-4 text-center mt-auto">
+        <p>Organized by 2(A)CTR, GITAM. Jai Hind 🇮🇳</p>
+    </footer>
+
+    <script>
+        // --- CONFIGURATION ---
+        const eventDate = new Date("2025-08-23T07:00:00").getTime();
+        const googleFormUrl = "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE"; 
+        const quotes = ["Unity and Discipline.", "One for All, All for One.", "Service Before Self."];
+        let currentQuoteIndex = 0;
+
+        // --- DOM ELEMENTS ---
+        const pageMain = document.getElementById('page-main');
+        const pageWhyJoin = document.getElementById('page-why-join');
+        const whyJoinBtn = document.getElementById('why-join-btn');
+        const backToMainBtn = document.getElementById('back-to-main-btn');
+        
+        const daysEl = document.getElementById('days');
+        const hoursEl = document.getElementById('hours');
+        const minutesEl = document.getElementById('minutes');
+        const secondsEl = document.getElementById('seconds');
+        const typewriterEl = document.getElementById('typewriter');
+        const registerLink = document.getElementById('register-link');
+        const qrCodeImg = document.getElementById('qr-code-img');
+
+        // --- PAGE NAVIGATION ---
+        function showPage(pageToShow) {
+            const pages = [pageMain, pageWhyJoin];
+            pages.forEach(page => {
+                if (page === pageToShow) {
+                    page.style.opacity = 0;
+                    page.classList.remove('hidden');
+                    setTimeout(() => page.style.opacity = 1, 50);
+                } else {
+                    page.style.opacity = 0;
+                    setTimeout(() => page.classList.add('hidden'), 500);
+                }
+            });
+             window.scrollTo(0, 0); // Scroll to top on page change
+        }
+
+        whyJoinBtn.addEventListener('click', () => showPage(pageWhyJoin));
+        backToMainBtn.addEventListener('click', () => showPage(pageMain));
+
+        // --- INITIALIZATION ---
+        function initialize() {
+            // Update registration links
+            if (googleFormUrl.includes("YOUR_FORM_ID_HERE")) {
+                console.warn("CRITICAL: Please update the 'googleFormUrl' in the script with your actual registration link.");
+                registerLink.href = "#";
+                qrCodeImg.alt = "QR Code not available - please configure the link";
+            } else {
+                registerLink.href = googleFormUrl;
+                qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${encodeURIComponent(googleFormUrl)}`;
+                qrCodeImg.alt = "Scan to register for 2(A)CTR NCC GITAM";
+            }
+
+            // Start countdown and typewriter
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+            startTypewriter();
+            setupScrollAnimations();
+            setupGallery();
+        }
+
+        // --- COUNTDOWN LOGIC ---
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            if (distance < 0) {
+                if(document.getElementById('countdown-timer')) {
+                    document.getElementById('countdown-timer').innerHTML = '<h3 class="text-4xl font-bold text-red-600 army-header">The Event has commenced!</h3>';
+                }
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            daysEl.textContent = String(days).padStart(2, '0');
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minutesEl.textContent = String(minutes).padStart(2, '0');
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+
+        // --- TYPEWRITER LOGIC ---
+        function startTypewriter() {
+            const currentQuote = quotes[currentQuoteIndex];
+            typewriterEl.innerHTML = '';
+            typewriterEl.classList.remove('typewriter-text');
+            void typewriterEl.offsetWidth;
+            typewriterEl.classList.add('typewriter-text');
+            typewriterEl.textContent = currentQuote;
+
+            setTimeout(() => {
+                currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+                startTypewriter();
+            }, 7000);
+        }
+        
+        // --- GALLERY LOGIC ---
+        function setupGallery() {
+            const slides = document.querySelectorAll('.gallery-slide');
+            const prevBtn = document.querySelector('.gallery-nav.prev');
+            const nextBtn = document.querySelector('.gallery-nav.next');
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle('active', i === index);
+                });
+            }
+
+            showSlide(currentSlide);
+
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+                showSlide(currentSlide);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide < slides.length - 1) ? currentSlide + 1 : 0;
+                showSlide(currentSlide);
+            });
+        }
+
+        // --- SCROLL ANIMATION LOGIC ---
+        function setupScrollAnimations() {
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1 });
+                animatedElements.forEach(el => observer.observe(el));
+            } else {
+                animatedElements.forEach(el => el.classList.add('visible'));
+            }
+        }
+
+        // --- RUN ON PAGE LOAD ---
+        document.addEventListener('DOMContentLoaded', initialize);
+    </script>
+</body>
+</html>
+
