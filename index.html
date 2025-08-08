@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2(A)CTR NCC GITAM Recruitment 2025</title>
+    
+    <!-- External Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-primary-green text-off-white-text shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo/Brand with NCC Flag Colors -->
+                <div class="flex items-center space-x-3">
+                    <div class="flex items-center space-x-1">
+                        <div class="w-1 h-8 bg-red-600 rounded-full"></div>
+                        <div class="w-1 h-8 bg-blue-900 rounded-full"></div>
+                        <div class="w-1 h-8 bg-blue-500 rounded-full"></div>
+                    </div>
+                    <div class="font-bold text-white">2(A)CTR NCC</div>
+                    <div class="hidden md:block text-sm">GITAM University</div>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" id="nav-home" class="nav-link px-3 py-2 rounded-md transition-colors duration-300">Home</a>
+                    <a href="#" id="nav-about" class="nav-link px-3 py-2 rounded-md transition-colors duration-300">About NCC</a>
+                    <a href="#" id="nav-join" class="nav-link px-3 py-2 rounded-md transition-colors duration-300">Join Now</a>
+                    <a href="#" id="nav-contact" class="nav-link px-3 py-2 rounded-md transition-colors duration-300">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="#" id="mobile-nav-home" class="nav-link block px-3 py-2 rounded-md transition-colors duration-300">Home</a>
+                <a href="#" id="mobile-nav-about" class="nav-link block px-3 py-2 rounded-md transition-colors duration-300">About NCC</a>
+                <a href="#" id="mobile-nav-join" class="nav-link block px-3 py-2 rounded-md transition-colors duration-300">Join Now</a>
+                <a href="#" id="mobile-nav-contact" class="nav-link block px-3 py-2 rounded-md transition-colors duration-300">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto p-4 md:p-8 text-center">
+
+        <!-- Page 1: Home -->
+        <div id="page-home">
+            <!-- Header Section -->
+            <header class="mb-12">
+                <!-- NCC Flag Inspired Decorative Element -->
+                <div class="flex justify-center mb-6">
+                    <div class="flex rounded-lg overflow-hidden shadow-lg">
+                        <div class="w-8 h-2 bg-red-600"></div>
+                        <div class="w-8 h-2 bg-blue-900"></div>
+                        <div class="w-8 h-2 bg-blue-500"></div>
+                    </div>
+                </div>
+                
+                <h1 class="army-header text-5xl md:text-7xl mb-2">2(A)CTR</h1>
+                <h2 class="text-3xl md:text-5xl text-ncc-navy mb-6 font-light army-header">NCC GITAM Recruitment 2025</h2>
+                <p id="typewriter" class="text-lg md:text-xl h-8 text-ncc-gold font-semibold"></p>
+            </header>
+
+            <!-- Why NCC Was Formed Section -->
+            <section class="mb-12 scroll-animate">
+                <div class="details-card p-6 rounded-lg shadow-lg max-w-4xl mx-auto border-l-8 border-ncc-gold">
+                    <h3 class="army-header text-3xl mb-6">Why NCC Was Formed</h3>
+                    <div class="text-left space-y-4 text-lg">
+                        <p>The National Cadet Corps (NCC) was formed with the vision of developing <strong class="text-ncc-navy">character, comradeship, discipline, leadership, secular outlook, spirit of adventure, and ideals of selfless service</strong> among the youth of the country.</p>
+                        <p>Post-independence, India needed a unified organization to channel the energy of youth towards nation-building. The NCC serves as a bridge between the military and civilian sectors, creating responsible citizens who can contribute to national development.</p>
+                        <p class="text-ncc-gold font-semibold italic text-center text-xl">"The safety, honour and welfare of your country come first, always and every time."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brief History Section -->
+            <section class="mb-12 scroll-animate">
+                <div class="details-card p-6 rounded-lg shadow-lg max-w-4xl mx-auto border-l-8 border-ncc-red">
+                    <h3 class="army-header text-3xl mb-6">A Brief History of NCC</h3>
+                    <div class="text-left space-y-4 text-lg">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-4 rounded-lg bg-gradient-to-r from-red-50 to-transparent">
+                                <h4 class="font-bold text-ncc-red mb-2">🏛️ Foundation (1948)</h4>
+                                <p>Established under the National Cadet Corps Act of 1948, replacing the University Training Corps (UTC).</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-gradient-to-r from-blue-50 to-transparent">
+                                <h4 class="font-bold text-ncc-navy mb-2">📈 Growth (1950s-60s)</h4>
+                                <p>Expanded rapidly across schools and colleges, becoming a symbol of youth empowerment.</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-gradient-to-r from-blue-50 to-transparent">
+                                <h4 class="font-bold text-ncc-blue mb-2">🌟 Recognition (1970s)</h4>
+                                <p>Gained international recognition for its unique model of civilian-military cooperation.</p>
+                            </div>
+                            <div class="p-4 rounded-lg bg-gradient-to-r from-yellow-50 to-transparent">
+                                <h4 class="font-bold text-ncc-gold mb-2">🚀 Modern Era (2000s)</h4>
+                                <p>Adapted to contemporary challenges while maintaining core values and traditions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Countdown Timer Section -->
+            <section id="countdown-timer" class="mb-12 scroll-animate">
+                <h3 class="army-header text-3xl mb-6">Recruitment Countdown</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                    <div class="countdown-box p-4 rounded-lg shadow-md border-t-4 border-ncc-red">
+                        <div id="days" class="text-5xl font-bold text-ncc-red">00</div>
+                        <div class="text-sm uppercase tracking-wider text-ncc-navy">Days</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md border-t-4 border-ncc-navy">
+                        <div id="hours" class="text-5xl font-bold text-ncc-navy">00</div>
+                        <div class="text-sm uppercase tracking-wider text-ncc-navy">Hours</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md border-t-4 border-ncc-blue">
+                        <div id="minutes" class="text-5xl font-bold text-ncc-blue">00</div>
+                        <div class="text-sm uppercase tracking-wider text-ncc-navy">Minutes</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg shadow-md border-t-4 border-ncc-gold">
+                        <div id="seconds" class="text-5xl font-bold text-ncc-gold">00</div>
+                        <div class="text-sm uppercase tracking-wider text-ncc-navy">Seconds</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Event Details Section -->
+            <section id="event-details" class="mb-12 scroll-animate">
+                <div class="details-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto border-l-8 border-ncc-blue">
+                    <h3 class="army-header text-3xl mb-6">Event Details</h3>
+                    <div class="text-left space-y-4 text-lg">
+                        <p><strong class="text-ncc-red">🗓️ Date:</strong> August 23, 2025</p>
+                        <p><strong class="text-ncc-navy">⏰ Time:</strong> 0700 Hours (7:00 AM Sharp)</p>
+                        <p><strong class="text-ncc-blue">📍 Location:</strong> Cricket Ground, GITAM University</p>
+                        <p><strong class="text-ncc-gold">👕 Uniform:</strong> Tracksuit with running shoes</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Eligibility Criteria Section -->
+            <section class="mb-12 max-w-2xl mx-auto scroll-animate">
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg" role="alert">
+                  <p class="font-bold">Eligibility Criteria</p>
+                  <p>Enrollment is open only to <strong>first and second-year</strong> undergraduate students of GITAM University.</p>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Page 2: About NCC -->
+        <div id="page-about" class="hidden page">
+             <header class="mb-12">
+                <h1 class="army-header text-5xl md:text-7xl text-primary-green mb-2">About NCC</h1>
+                <h2 class="text-2xl md:text-4xl text-primary-green mb-6 font-light army-header">Shape Your Future</h2>
+            </header>
+            
+            <!-- Why Join NCC Section -->
+            <section class="max-w-3xl mx-auto text-left space-y-8 mb-12">
+                <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Develop Core Values</h3>
+                    <p>The NCC is a premier organization that instills values of <strong>Discipline, Leadership, and Comradeship</strong>. Cadets learn to work as a team, take initiative, and develop a strong sense of national pride and selfless service (Seva Paramo Dharma).</p>
+                </div>
+                
+                 <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Unique Opportunities</h3>
+                    <p>Gain hands-on experience in adventure activities like trekking, parasailing, and rock climbing. Participate in prestigious national camps such as the Republic Day Camp (RDC) in Delhi, and even get a chance to represent India internationally through the Youth Exchange Program (YEP).</p>
+                </div>
+
+                <div class="details-card p-6 rounded-lg shadow-lg">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">Career Advantages</h3>
+                    <p>NCC 'B' & 'C' certificate holders receive bonus marks/points in various government job applications, including direct entry opportunities in the Indian Armed Forces. It's a significant stepping stone for a distinguished career.</p>
+                </div>
+                
+                <!-- Testimonials Section -->
+                <div class="details-card p-6 rounded-lg shadow-lg border-l-8 border-primary-green">
+                    <h3 class="army-header text-2xl text-primary-green mb-4">From Our Cadets</h3>
+                    <div class="testimonial">
+                        <p class="italic">"Joining NCC was the best decision of my college life. It taught me discipline and gave me friends for a lifetime."</p>
+                        <p class="testimonial-author mt-2">-  Cadet S.Manaswin</p>
+                    </div>
+                     <div class="testimonial">
+                        <p class="italic">"The Army attachment camps were thrilling. I discovered a strength in myself I never knew I had. Jai Hind!"</p>
+                        <p class="testimonial-author mt-2">- Sergent Somisetty</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Image Gallery Section -->
+            <section class="mb-12 max-w-3xl mx-auto scroll-animate">
+                <h3 class="army-header text-3xl text-primary-green mb-6">Glimpses of NCC Life</h3>
+                <div class="gallery-container rounded-lg shadow-lg">
+                    <!-- Images are now compressed for faster loading -->
+                    <div class="gallery-slide active">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/rK4DqKFP/Whats-App-Image-2025-08-06-at-20-08-39-b5b821f1.jpg&q=80" alt="Republic Day Celebration">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/yFp199Kf/Whats-App-Image-2025-08-06-at-20-41-19-86c4a43c.jpg&q=80" alt="NCC Cadets">
+                    </div>
+                    <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/5h2L5mkS/Whats-App-Image-2025-08-06-at-20-39-10-e8779013.jpg&q=80" alt="NCC Cadets in Formation">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/sdPPsj2y/Whats-App-Image-2025-08-06-at-20-36-25-713c9758.jpg&q=80" alt="NCC Officer with Cadets">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/NBW88pH/Whats-App-Image-2025-08-06-at-20-40-41-93467466.jpg&q=80" alt="NCC Group Photo">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/rKtNbm8X/Whats-App-Image-2025-08-06-at-20-42-49-1771af91.jpg&q=80" alt="NCC Cadets Marching">
+                    </div>
+                     <div class="gallery-slide">
+                        <img src="https://images.weserv.nl/?url=i.ibb.co/fVxsqCwk/Whats-App-Image-2025-08-06-at-20-44-49-b80496e7.jpg&q=80" alt="NCC Event">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page 3: Join Now -->
+        <div id="page-join" class="hidden page">
+            <header class="mb-12">
+                <h1 class="army-header text-5xl md:text-7xl text-primary-green mb-2">Join Now</h1>
+                <h2 class="text-2xl md:text-4xl text-primary-green mb-6 font-light army-header">Begin Your Journey</h2>
+            </header>
+
+            <!-- Registration Section -->
+            <section id="registration" class="mb-8 scroll-animate">
+                <div class="max-w-2xl mx-auto">
+                    <div class="details-card p-8 rounded-lg shadow-lg mb-8">
+                        <h3 class="army-header text-2xl text-primary-green mb-4">Ready to Enlist?</h3>
+                        <p class="text-lg mb-6">Take the first step towards developing leadership, discipline, and character. Join the prestigious 2(A)CTR NCC unit at GITAM University.</p>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-8">
+                            <a href="#" id="register-link" target="_blank" class="register-btn inline-block text-2xl font-bold py-4 px-12 rounded-lg uppercase tracking-wider">
+                                Enlist Now
+                            </a>
+                        </div>
+                        
+                        <div class="flex flex-col items-center">
+                            <p class="mb-4 text-sm uppercase">Or Scan to Register</p>
+                            <div class="qr-code-container rounded-lg shadow-md">
+                                <img id="qr-code-img" src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=YOUR_GOOGLE_FORM_LINK_HERE" alt="QR Code for Registration" class="block">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Important Note -->
+                    <div class="bg-red-50 border-l-4 border-red-500 text-red-700 p-4 rounded-lg" role="alert">
+                        <p class="font-bold">⚠️ Important</p>
+                        <p>Registration closes on <strong>August 22, 2025</strong>. Ensure you meet all eligibility criteria before applying.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Page 4: Contact -->
+        <div id="page-contact" class="hidden page">
+            <header class="mb-12">
+                <h1 class="army-header text-5xl md:text-7xl text-primary-green mb-2">Contact</h1>
+                <h2 class="text-2xl md:text-4xl text-primary-green mb-6 font-light army-header">Get In Touch</h2>
+            </header>
+
+            <section class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Contact Information -->
+                    <div class="details-card p-6 rounded-lg shadow-lg">
+                        <h3 class="army-header text-2xl text-primary-green mb-6">Contact Information</h3>
+                        <div class="space-y-4 text-left">
+                            <div>
+                                <h4 class="font-bold text-primary-green mb-2">For General Queries</h4>
+                                <p><strong>Name:</strong> [To be updated]</p>
+                                <p><strong>Position:</strong> [To be updated]</p>
+                                <p><strong>Phone:</strong> [To be updated]</p>
+                                <p><strong>Email:</strong> [To be updated]</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-primary-green mb-2">For Training Queries</h4>
+                                <p><strong>Name:</strong> [To be updated]</p>
+                                <p><strong>Position:</strong> [To be updated]</p>
+                                <p><strong>Phone:</strong> [To be updated]</p>
+                                <p><strong>Email:</strong> [To be updated]</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Location Information -->
+                    <div class="details-card p-6 rounded-lg shadow-lg">
+                        <h3 class="army-header text-2xl text-primary-green mb-6">Location</h3>
+                        <div class="text-left space-y-4">
+                            <div>
+                                <h4 class="font-bold text-primary-green mb-2">📍 GITAM University</h4>
+                                <p>Rushikonda, Visakhapatnam</p>
+                                <p>Andhra Pradesh 530045</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-primary-green mb-2">🕐 Office Hours</h4>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                                <p>Saturday: 9:00 AM - 1:00 PM</p>
+                                <p>Sunday: Closed</p>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-bold text-primary-green mb-2">🎯 Training Ground</h4>
+                                <p>Cricket Ground, GITAM Campus</p>
+                                <p>Morning Training: 6:00 AM - 8:00 AM</p>
+                                <p>Evening Training: 4:00 PM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Contact Note -->
+                <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 text-blue-700 p-4 rounded-lg" role="alert">
+                    <p class="font-bold">💡 Quick Tip</p>
+                    <p>For urgent queries regarding recruitment, please visit the NCC office during office hours or contact the numbers provided above.</p>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-ncc-gradient text-off-white-text p-4 text-center mt-auto">
+        <div class="flex justify-center items-center space-x-4">
+            <div class="flex space-x-1">
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+            </div>
+            <p class="font-semibold">Organized by 2(A)CTR, GITAM. Jai Hind 🇮🇳</p>
+            <div class="flex space-x-1">
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                <div class="w-2 h-2 bg-yellow-400 rounded-full"></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
