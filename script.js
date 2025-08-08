@@ -23,7 +23,7 @@ async function loadConfig() {
 
 // --- DOM ELEMENTS ---
 let pageHome, pageAbout, pageJoin, pageContact;
-let daysEl, hoursEl, minutesEl, secondsEl, typewriterEl, registerLink, qrCodeImg;
+let daysEl, hoursEl, minutesEl, secondsEl, typewriterEl, registerLink, joinNowBtn, qrCodeImg;
 let mobileMenuBtn, mobileMenu;
 let navLinks = [];
 
@@ -40,6 +40,7 @@ function initializeElements() {
     secondsEl = document.getElementById('seconds');
     typewriterEl = document.getElementById('typewriter');
     registerLink = document.getElementById('register-link');
+    joinNowBtn = document.getElementById('join-now-btn');
     qrCodeImg = document.getElementById('qr-code-img');
     
     mobileMenuBtn = document.getElementById('mobile-menu-btn');
@@ -261,10 +262,12 @@ function setupRegistration() {
     // Update registration links
     if (googleFormUrl.includes("YOUR_FORM_ID_HERE")) {
         console.warn("CRITICAL: Please update the 'googleFormUrl' in the script with your actual registration link.");
-        registerLink.href = "#";
+        if (registerLink) registerLink.href = "#";
+        if (joinNowBtn) joinNowBtn.href = "#";
         qrCodeImg.alt = "QR Code not available - please configure the link";
     } else {
-        registerLink.href = googleFormUrl;
+        if (registerLink) registerLink.href = googleFormUrl;
+        if (joinNowBtn) joinNowBtn.href = googleFormUrl;
         const qrSize = config.registration?.qrCodeSize || "150x150";
         qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}&data=${encodeURIComponent(googleFormUrl)}`;
         qrCodeImg.alt = "Scan to register for 2(A)CTR NCC GITAM";
