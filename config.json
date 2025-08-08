@@ -1,0 +1,74 @@
+{
+  "event": {
+    "date": "2025-08-23T07:00:00",
+    "name": "2(A)CTR NCC GITAM Recruitment 2025",
+    "location": "Cricket Ground, GITAM University",
+    "time": "0700 Hours (7:00 AM Sharp)",
+    "uniform": "Tracksuit with running shoes"
+  },
+  "registration": {
+    "googleFormUrl": "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE",
+    "qrCodeSize": "150x150"
+  },
+  "typewriter": {
+    "quotes": [
+      "Unity and Discipline.",
+      "One for All, All for One.",
+      "Service Before Self.",
+      "The safety, honour and welfare of your country come first, always and every time."
+    ],
+    "displayDuration": 7000
+  },
+  "gallery": {
+    "autoAdvanceInterval": 5000,
+    "images": [
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/rK4DqKFP/Whats-App-Image-2025-08-06-at-20-08-39-b5b821f1.jpg&q=80",
+        "alt": "Republic Day Celebration"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/yFp199Kf/Whats-App-Image-2025-08-06-at-20-41-19-86c4a43c.jpg&q=80",
+        "alt": "NCC Cadets"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/5h2L5mkS/Whats-App-Image-2025-08-06-at-20-39-10-e8779013.jpg&q=80",
+        "alt": "NCC Cadets in Formation"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/sdPPsj2y/Whats-App-Image-2025-08-06-at-20-36-25-713c9758.jpg&q=80",
+        "alt": "NCC Officer with Cadets"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/NBW88pH/Whats-App-Image-2025-08-06-at-20-40-41-93467466.jpg&q=80",
+        "alt": "NCC Group Photo"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/rKtNbm8X/Whats-App-Image-2025-08-06-at-20-42-49-1771af91.jpg&q=80",
+        "alt": "NCC Cadets Marching"
+      },
+      {
+        "url": "https://images.weserv.nl/?url=i.ibb.co/fVxsqCwk/Whats-App-Image-2025-08-06-at-20-44-49-b80496e7.jpg&q=80",
+        "alt": "NCC Event"
+      }
+    ]
+  },
+  "contact": {
+    "general": {
+      "name": "[To be updated]",
+      "position": "[To be updated]",
+      "phone": "[To be updated]",
+      "email": "[To be updated]"
+    },
+    "training": {
+      "name": "[To be updated]",
+      "position": "[To be updated]",
+      "phone": "[To be updated]",
+      "email": "[To be updated]"
+    },
+    "location": {
+      "address": "Rushikonda, Visakhapatnam, Andhra Pradesh 530045",
+      "officeHours": "Monday - Friday: 9:00 AM - 5:00 PM, Saturday: 9:00 AM - 1:00 PM",
+      "trainingHours": "Morning: 6:00 AM - 8:00 AM, Evening: 4:00 PM - 6:00 PM"
+    }
+  }
+}

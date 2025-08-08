@@ -1,0 +1,364 @@
+/* ========================================
+CSS Reset and Base Styles
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+Custom CSS for Professional Army Theme
+======================================== */
+
+:root {
+    --ncc-red: #DC143C; /* Deep red from NCC flag */
+    --ncc-navy: #1E3A8A; /* Navy blue from NCC flag */
+    --ncc-light-blue: #3B82F6; /* Light blue from NCC flag */
+    --ncc-gold: #FFD700; /* Gold for emblem and accents */
+    --background-white: #FFFFFF; /* White Background */
+    --off-white-text: #F5F5DC; /* Beige for text on dark bg */
+    --dark-text: #1C1C1C;
+    --ncc-gradient: linear-gradient(90deg, var(--ncc-red) 0%, var(--ncc-navy) 50%, var(--ncc-light-blue) 100%);
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: var(--background-white);
+    color: var(--dark-text);
+    /* NCC Flag Inspired Background Pattern */
+    background-image: 
+        linear-gradient(45deg, rgba(220, 20, 60, 0.03) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(30, 58, 138, 0.03) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.03) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 215, 0, 0.02) 75%);
+    background-size: 60px 60px;
+    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+    background-attachment: fixed;
+}
+
+.army-header {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: var(--ncc-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Typewriter Animation */
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .1em;
+    animation: typing 4s steps(30, end);
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Interactive Card & Button Styles */
+.countdown-box, .details-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.9) 100%);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(30, 58, 138, 0.1);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.08);
+}
+
+.details-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(30, 58, 138, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+.register-btn, .nav-btn {
+    background: var(--ncc-gradient);
+    color: var(--off-white-text);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+    border: 2px solid transparent;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, var(--ncc-navy) 0%, var(--ncc-light-blue) 100%);
+}
+
+.register-btn:hover, .nav-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+    border: 2px solid var(--ncc-gold);
+}
+
+.register-btn:active, .nav-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.qr-code-container {
+    border: 4px solid var(--ncc-gold);
+    padding: 8px;
+    background: linear-gradient(135deg, var(--ncc-red) 0%, var(--ncc-navy) 50%, var(--ncc-light-blue) 100%);
+    border-radius: 12px;
+}
+
+.qr-code-container img {
+    border-radius: 8px;
+}
+
+/* Scroll & Page Animation */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.page {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Gallery Styles */
+.gallery-container {
+    position: relative;
+    overflow: hidden;
+    background-color: #000; /* Black background for consistent frame */
+    border-radius: 0.5rem;
+    aspect-ratio: 16/10; /* Fixed aspect ratio to maintain layout */
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-container:hover {
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.2);
+    transform: translateY(-2px);
+}
+
+.gallery-container::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.gallery-container.paused::after {
+    opacity: 1;
+}
+
+.gallery-container.paused::before {
+    content: '▶';
+    position: absolute;
+    top: 50%;
+    left: 52%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    z-index: 11;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-slide.active {
+    opacity: 1;
+    transform: translateX(0);
+    z-index: 2;
+}
+
+.gallery-slide.prev {
+    transform: translateX(-100%);
+    z-index: 1;
+}
+
+.gallery-slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Maintain aspect ratio, fit within bounds */
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.gallery-slide img:hover {
+    transform: scale(1.02);
+}
+
+/* Testimonial Styles */
+.testimonial {
+    border-left: 4px solid var(--ncc-gold);
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+    background: linear-gradient(90deg, rgba(255, 215, 0, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border-radius: 0 8px 8px 0;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    color: var(--ncc-navy);
+}
+
+/* Custom Tailwind CSS Classes */
+.text-primary-green {
+    color: var(--ncc-navy);
+}
+
+.bg-primary-green {
+    background: var(--ncc-gradient);
+}
+
+.text-off-white-text {
+    color: var(--off-white-text);
+}
+
+.border-primary-green {
+    border-color: var(--ncc-gold);
+}
+
+.bg-secondary-green {
+    background: linear-gradient(135deg, var(--ncc-navy) 0%, var(--ncc-light-blue) 100%);
+}
+
+/* NCC Flag Colors */
+.text-ncc-red {
+    color: var(--ncc-red);
+}
+
+.text-ncc-navy {
+    color: var(--ncc-navy);
+}
+
+.text-ncc-blue {
+    color: var(--ncc-light-blue);
+}
+
+.text-ncc-gold {
+    color: var(--ncc-gold);
+}
+
+.bg-ncc-gradient {
+    background: var(--ncc-gradient);
+}
+
+.border-ncc-red {
+    border-color: var(--ncc-red);
+}
+
+.border-ncc-navy {
+    border-color: var(--ncc-navy);
+}
+
+.border-ncc-blue {
+    border-color: var(--ncc-light-blue);
+}
+
+.border-ncc-gold {
+    border-color: var(--ncc-gold);
+}
+
+/* Navigation Styles */
+.nav-link {
+    position: relative;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 8px;
+}
+
+.nav-link.active {
+    background: linear-gradient(135deg, var(--ncc-navy) 0%, var(--ncc-light-blue) 100%);
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: var(--ncc-gold);
+}
+
+.nav-link:hover {
+    background: linear-gradient(135deg, var(--ncc-light-blue) 0%, var(--ncc-navy) 100%);
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+#mobile-menu.show {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* Responsive navigation adjustments */
+@media (max-width: 768px) {
+    .nav-link {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem 0;
+        border-radius: 0.375rem;
+    }
+}
