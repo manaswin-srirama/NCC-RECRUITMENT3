@@ -48,15 +48,14 @@ body {
     font-family: 'Roboto Mono', monospace;
     background-color: var(--background-white);
     color: var(--dark-text);
-    /* NCC Flag Inspired Background Pattern */
+    /* Your camouflage image with subtle overlay for readability */
     background-image: 
-        linear-gradient(45deg, rgba(220, 20, 60, 0.03) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(30, 58, 138, 0.03) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(59, 130, 246, 0.03) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(255, 215, 0, 0.02) 75%);
-    background-size: 60px 60px;
-    background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+        linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)),
+        url('camobg.jpg');
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .army-header {
@@ -78,11 +77,25 @@ body {
     margin: 0 auto;
     letter-spacing: .1em;
     animation: typing 4s steps(30, end);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+}
+
+/* Mobile specific typewriter adjustments */
+@media (max-width: 768px) {
+    .typewriter-text {
+        letter-spacing: .05em;
+        font-size: 0.9rem;
+        white-space: normal;
+        text-align: center;
+        animation: none;
+        width: 100%;
+    }
 }
 
 /* Interactive Card & Button Styles */
