@@ -7,7 +7,7 @@
     "uniform": "Tracksuit with running shoes"
   },
   "registration": {
-    "googleFormUrl": "https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE",
+    "googleFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc_lV9X_YugeoS-jutZYz7wFTAwbfeZQw-hwfMoNTqVyr6Pdg/viewform?usp=dialog",
     "qrCodeSize": "150x150"
   },
   "typewriter": {
@@ -54,16 +54,14 @@
   },
   "contact": {
     "general": {
-      "name": "[To be updated]",
-      "position": "[To be updated]",
-      "phone": "[To be updated]",
-      "email": "[To be updated]"
+      "name": "M Bala Chandra Reddy",
+      "position": "SUO",
+      "phone": "91603 08520"
     },
     "training": {
-      "name": "[To be updated]",
-      "position": "[To be updated]",
-      "phone": "[To be updated]",
-      "email": "[To be updated]"
+      "name": "L Akansha",
+      "position": "SUO",
+      "phone": "91103 73339"
     },
     "location": {
       "address": "Rushikonda, Visakhapatnam, Andhra Pradesh 530045",
