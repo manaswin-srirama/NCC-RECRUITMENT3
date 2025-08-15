@@ -1,0 +1,28 @@
+[build]
+  # No build command needed for static site
+  command = ""
+  
+  # Publish directory (root of the project)
+  publish = "."
+
+[build.environment]
+  # Specify Node.js version (if needed)
+  NODE_VERSION = "18"
+
+[[headers]]
+  # Apply these headers to all routes
+  for = "/*"
+  [headers.values]
+    # Enable CORS for the config.json file
+    Access-Control-Allow-Origin = "*"
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+
+# Redirect rules (if needed)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  conditions = {Role = ["admin"], Country = ["US"]}

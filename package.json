@@ -1,0 +1,17 @@
+{
+  "name": "ncc-recruitment-website",
+  "version": "1.0.0",
+  "description": "2(A)CTR NCC GITAM Recruitment 2025 Website",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build process needed for static site'",
+    "start": "echo 'Static site - open index.html'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manaswin-srirama/NCC-RECRUITMENT.git"
+  },
+  "keywords": ["ncc", "recruitment", "static-site"],
+  "author": "NCC GITAM",
+  "license": "ISC"
+}
