@@ -172,6 +172,9 @@ function startTypewriter() {
 function setupGallery() {
     const slides = document.querySelectorAll('.gallery-slide');
     const galleryContainer = document.querySelector('.gallery-container');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const playPauseBtn = document.getElementById('playPauseBtn');
     
     if (!slides.length || !galleryContainer) return;
     
@@ -196,14 +199,20 @@ function setupGallery() {
         showSlide(currentSlide);
     }
 
+    function prevSlide() {
+        currentSlide = (currentSlide > 0) ? currentSlide - 1 : slides.length - 1;
+        showSlide(currentSlide);
+    }
+
     function startSlideshow() {
         if (!intervalId) {
             const autoAdvanceInterval = config.gallery?.autoAdvanceInterval || 5000;
             intervalId = setInterval(nextSlide, autoAdvanceInterval);
         }
         isPlaying = true;
-        galleryContainer.classList.remove('paused');
-        galleryContainer.style.cursor = 'pointer';
+        if (playPauseBtn) {
+            playPauseBtn.classList.add('playing');
+        }
     }
 
     function stopSlideshow() {
@@ -212,8 +221,9 @@ function setupGallery() {
             intervalId = null;
         }
         isPlaying = false;
-        galleryContainer.classList.add('paused');
-        galleryContainer.style.cursor = 'pointer';
+        if (playPauseBtn) {
+            playPauseBtn.classList.remove('playing');
+        }
     }
 
     function toggleSlideshow() {
@@ -224,14 +234,119 @@ function setupGallery() {
         }
     }
 
+    // Event Listeners
+    if (prevBtn) {
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            prevSlide();
+            // Restart slideshow if it was playing
+            if (isPlaying) {
+                stopSlideshow();
+                startSlideshow();
+            }
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            nextSlide();
+            // Restart slideshow if it was playing
+            if (isPlaying) {
+                stopSlideshow();
+                startSlideshow();
+            }
+        });
+    }
+
+    if (playPauseBtn) {
+        playPauseBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleSlideshow();
+        });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        // Only handle keyboard events when the gallery is visible
+        const aboutPage = document.getElementById('page-about');
+        if (!aboutPage || aboutPage.classList.contains('hidden')) return;
+
+        switch(e.key) {
+            case 'ArrowLeft':
+                e.preventDefault();
+                prevSlide();
+                if (isPlaying) {
+                    stopSlideshow();
+                    startSlideshow();
+                }
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                nextSlide();
+                if (isPlaying) {
+                    stopSlideshow();
+                    startSlideshow();
+                }
+                break;
+            case ' ': // Spacebar
+                e.preventDefault();
+                toggleSlideshow();
+                break;
+        }
+    });
+
+    // Touch/Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    galleryContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    galleryContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const swipeDistance = touchEndX - touchStartX;
+
+        if (Math.abs(swipeDistance) > swipeThreshold) {
+            if (swipeDistance > 0) {
+                // Swipe right - go to previous slide
+                prevSlide();
+            } else {
+                // Swipe left - go to next slide
+                nextSlide();
+            }
+            
+            // Restart slideshow if it was playing
+            if (isPlaying) {
+                stopSlideshow();
+                startSlideshow();
+            }
+        }
+    }
+
     // Initialize gallery
     showSlide(currentSlide);
-    
-    // Add click event listener to toggle slideshow
-    galleryContainer.addEventListener('click', toggleSlideshow);
-    
-    // Start slideshow
     startSlideshow();
+
+    // Pause slideshow when user hovers over controls
+    const controls = document.querySelector('.gallery-controls');
+    if (controls) {
+        controls.addEventListener('mouseenter', () => {
+            if (isPlaying) stopSlideshow();
+        });
+        
+        controls.addEventListener('mouseleave', () => {
+            if (playPauseBtn && playPauseBtn.classList.contains('playing')) {
+                startSlideshow();
+            }
+        });
+    }
 }
 
 // --- SCROLL ANIMATION LOGIC ---
