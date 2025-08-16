@@ -378,6 +378,295 @@ body {
     }
 }
 
+/* ========================================
+Mobile Optimizations
+======================================== */
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    /* Body and container adjustments */
+    body {
+        background-attachment: scroll; /* Fix background on mobile */
+    }
+    
+    /* Header optimizations */
+    .army-header {
+        font-size: clamp(1.5rem, 8vw, 3rem) !important;
+        letter-spacing: 1px;
+        line-height: 1.2;
+    }
+    
+    /* Navigation improvements */
+    nav .container {
+        padding: 0 1rem;
+    }
+    
+    nav .py-4 {
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    
+    /* Main content spacing */
+    main {
+        padding: 1rem !important;
+    }
+    
+    /* Countdown timer mobile optimization */
+    .countdown-box {
+        padding: 1rem 0.75rem !important;
+    }
+    
+    #days, #hours, #minutes, #seconds {
+        font-size: 2.25rem !important; /* Bigger on mobile */
+    }
+    
+    .countdown-box .text-xs {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Cards and sections - BIGGER TABS */
+    .details-card {
+        padding: 1.5rem !important;
+        margin: 1rem 0;
+        font-size: 1rem !important;
+    }
+    
+    .details-card h3 {
+        font-size: 1.5rem !important;
+        margin-bottom: 1.25rem !important;
+    }
+    
+    .details-card h4 {
+        font-size: 1.25rem !important;
+    }
+    
+    .details-card p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Selection Process mobile optimization - BIGGER */
+    .details-card .space-y-6 > div {
+        padding: 1rem !important;
+        margin-bottom: 1.25rem;
+    }
+    
+    .details-card .space-y-3 li {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    .details-card .space-y-3 li span {
+        font-size: 1rem !important;
+    }
+    
+    /* Button optimizations */
+    .register-btn {
+        font-size: 1.1rem !important;
+        padding: 1rem 2rem !important;
+        line-height: 1.4;
+    }
+    
+    /* Typewriter text mobile fix */
+    #typewriter {
+        font-size: 1rem !important;
+        height: auto !important;
+        min-height: 2rem;
+        white-space: normal !important;
+        text-align: center;
+        animation: none !important;
+        width: 100% !important;
+    }
+    
+    /* Gallery mobile optimization */
+    .gallery-container {
+        aspect-ratio: 4/3; /* Better ratio for mobile */
+        max-height: 60vh;
+    }
+    
+    /* Form and QR code mobile */
+    .qr-code-container {
+        padding: 6px;
+        border-width: 3px;
+    }
+    
+    .qr-code-container img {
+        width: 140px;
+        height: 140px;
+    }
+    
+    /* Text size adjustments - BIGGER */
+    .text-lg, .text-base {
+        font-size: 1rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1.25rem !important;
+    }
+    
+    .text-2xl {
+        font-size: 1.75rem !important;
+    }
+    
+    .text-3xl {
+        font-size: 2rem !important;
+    }
+    
+    /* Spacing improvements */
+    .mb-12 {
+        margin-bottom: 2.5rem !important;
+    }
+    
+    .mb-8 {
+        margin-bottom: 2rem !important;
+    }
+    
+    .mb-6 {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    /* Grid improvements for mobile */
+    .grid-cols-2 {
+        gap: 0.75rem !important;
+    }
+    
+    /* Contact page mobile optimization - STACK VERTICALLY */
+    .grid.md\\:grid-cols-2 {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Contact page specific ordering */
+    .grid.md\\:grid-cols-2 > div:first-child {
+        order: 2; /* Contact Information goes second */
+    }
+    
+    .grid.md\\:grid-cols-2 > div:last-child {
+        order: 1; /* Location goes first */
+    }
+    
+    /* Footer mobile optimization */
+    footer .flex {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    /* Flag decorative elements mobile */
+    .w-8.h-2 {
+        width: 2rem;
+        height: 0.5rem;
+    }
+    
+    /* Eligibility criteria mobile - BIGGER */
+    .bg-yellow-100 {
+        padding: 1.25rem !important;
+    }
+    
+    .bg-yellow-100 p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* Why NCC section mobile */
+    .max-w-4xl {
+        max-width: 100% !important;
+    }
+    
+    .max-w-3xl {
+        max-width: 100% !important;
+    }
+    
+    .max-w-2xl {
+        max-width: 100% !important;
+    }
+    
+    /* About NCC section cards - BIGGER */
+    .max-w-3xl .details-card {
+        padding: 1.75rem !important;
+        margin: 1.25rem 0;
+    }
+    
+    .max-w-3xl .details-card h3 {
+        font-size: 1.5rem !important;
+    }
+    
+    .max-w-3xl .details-card p {
+        font-size: 1.1rem !important;
+        line-height: 1.7 !important;
+    }
+    
+    /* Join Now page - SINGLE BIG CARD */
+    #page-join .details-card {
+        padding: 2rem !important;
+        margin: 1.5rem 0;
+    }
+    
+    #page-join .details-card h3 {
+        font-size: 1.75rem !important;
+    }
+    
+    #page-join .details-card p {
+        font-size: 1.15rem !important;
+        line-height: 1.7 !important;
+    }
+}
+}
+
+/* Extra small devices optimization */
+@media (max-width: 480px) {
+    /* Even smaller screens */
+    .army-header {
+        font-size: clamp(1.2rem, 7vw, 2.5rem) !important;
+    }
+    
+    .countdown-box {
+        padding: 0.5rem !important;
+    }
+    
+    #days, #hours, #minutes, #seconds {
+        font-size: 1.5rem !important;
+    }
+    
+    .details-card {
+        padding: 0.75rem !important;
+    }
+    
+    .register-btn {
+        font-size: 0.9rem !important;
+        padding: 0.6rem 1.2rem !important;
+    }
+    
+    /* Navigation brand text */
+    .font-bold.text-white {
+        font-size: 0.9rem;
+    }
+    
+    .hidden.md\\:block {
+        display: none !important;
+    }
+}
+
+/* Landscape mobile optimization */
+@media (max-width: 768px) and (orientation: landscape) {
+    .gallery-container {
+        aspect-ratio: 16/9;
+        max-height: 50vh;
+    }
+    
+    .countdown-box {
+        padding: 0.5rem !important;
+    }
+    
+    main {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+}
+
 /* Testimonial Styles */
 .testimonial {
     border-left: 4px solid var(--ncc-gold);
@@ -457,6 +746,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     border-radius: 8px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-link.active {
@@ -481,6 +773,27 @@ body {
     box-shadow: 0 2px 8px rgba(30, 58, 138, 0.2);
 }
 
+/* Desktop Navigation - Keep items in single line */
+.hidden.md\\:flex {
+    flex-wrap: nowrap;
+}
+
+.hidden.md\\:flex .nav-link {
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+/* Brand/Logo section - Keep on single line */
+.flex.items-center.space-x-3 {
+    flex-wrap: nowrap;
+}
+
+.flex.items-center.space-x-3 > div {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 /* Mobile menu animation */
 #mobile-menu {
     transition: all 0.3s ease-in-out;
@@ -497,5 +810,31 @@ body {
         padding: 0.75rem 1rem;
         margin: 0.25rem 0;
         border-radius: 0.375rem;
+        white-space: nowrap; /* Keep single line on mobile too */
+        font-size: 0.9rem; /* Slightly smaller on mobile to fit */
+    }
+    
+    /* Hide GITAM University text on smaller screens to save space */
+    .hidden.md\\:block {
+        display: none !important;
+    }
+    
+    /* Adjust brand text size */
+    .font-bold.text-white {
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    
+    /* Mobile navigation container */
+    .hidden.md\\:flex {
+        display: none;
+    }
+    
+    /* Ensure mobile menu items stay on single lines */
+    #mobile-menu .nav-link {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

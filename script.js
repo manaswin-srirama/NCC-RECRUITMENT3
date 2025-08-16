@@ -378,11 +378,23 @@ function setupRegistration() {
     if (googleFormUrl.includes("YOUR_FORM_ID_HERE")) {
         console.warn("CRITICAL: Please update the 'googleFormUrl' in the script with your actual registration link.");
         if (registerLink) registerLink.href = "#";
-        if (joinNowBtn) joinNowBtn.href = "#";
+        if (joinNowBtn) {
+            joinNowBtn.href = "#";
+            joinNowBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(pageJoin);
+            });
+        }
         qrCodeImg.alt = "QR Code not available - please configure the link";
     } else {
         if (registerLink) registerLink.href = googleFormUrl;
-        if (joinNowBtn) joinNowBtn.href = googleFormUrl;
+        if (joinNowBtn) {
+            joinNowBtn.href = "#";
+            joinNowBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(pageJoin);
+            });
+        }
         const qrSize = config.registration?.qrCodeSize || "150x150";
         qrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}&data=${encodeURIComponent(googleFormUrl)}`;
         qrCodeImg.alt = "Scan to register for 2(A)CTR NCC GITAM";
